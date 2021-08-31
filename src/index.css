@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.text {
+  font-family: "Georgia", "Garamond", serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(img/herringbone.png);
 }
+
+.header h1 {
+  color: goldenrod;
+  font-weight: lighter;
+  margin-bottom: 0px;
+  font-family: "Book Antiqua", serif;
+}
+
+.header h3 {
+  color: gray;
+  font-size: 2vmax;
+  margin-bottom: 40px;
+}
+
+.header .header-icon {
+  color: white
+}
+
+.header .header-icon:hover {
+  color: goldenrod;
+}
+.header .icon-tray {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 10vw;
+  }
+  .header h2 {
+    font-size: 4vw;
+  }
+  .header .header-icon {
+    font-size: 6.5vw;
+  }
+}
+
+@media (min-width: 701px) {
+  .header h1 {
+    font-size: 6vw;
+  }
+  .header h2 {
+    font-size: 2vw;
+  }
+  .header .header-icon {
+    font-size: 3vw;
+  }
+}
+.header .background-img {
+  background-image: url(img/webb-dark.png);
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+
+
