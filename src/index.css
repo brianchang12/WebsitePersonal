@@ -4,8 +4,8 @@
 
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0px !important;
+  padding: 0px !important;
   background-image: url(img/herringbone.png);
 }
 
@@ -67,7 +67,78 @@ body {
   text-align: center;
 }
 
+.container {
+  padding: 10px 25px;
+  width: 100%;
+  background-color: darkkhaki;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  width: 315px;
+  height: 60px;
+  float: left;
+}
 
 
 
+nav {
+  float: right;
+}
 
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 80px;
+  padding-top: 20px;
+
+  position: relative;
+
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 300ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+
+}
+
+@media (max-width: 850px) {
+  nav li {
+    margin-left: 80px;
+  }
+
+}
