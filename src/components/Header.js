@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header">
       <div className="background-img">
         <div className="content">
-          <h1>Brian Chang</h1>
+          <h1>Welcome, I'm Brian Chang</h1>
           <h3>
             Third Year Computer Science (BSc) The University of British Columbia
           </h3>

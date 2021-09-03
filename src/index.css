@@ -4,30 +4,33 @@
 
 html,
 body {
-  margin: 0px !important;
-  padding: 0px !important;
+  margin: 0px;
+  padding: 0px;
   background-image: url(img/herringbone.png);
 }
 
 .header h1 {
-  color: goldenrod;
-  font-weight: lighter;
+  color: snow;
+  text-shadow: 0 0 12px black;
   margin-bottom: 0px;
-  font-family: "Book Antiqua", serif;
+  font-family: 'Besley', serif;
 }
 
 .header h3 {
-  color: gray;
+  text-shadow: 0 0 12px black;
+  color: snow;
+  font-weight: strong;
   font-size: 2vmax;
   margin-bottom: 40px;
+  font-family: 'Oxygen', sans-serif;
 }
 
 .header .header-icon {
-  color: white
+  color: snow;
 }
 
 .header .header-icon:hover {
-  color: goldenrod;
+  color: firebrick;
 }
 .header .icon-tray {
   display: flex;
@@ -48,6 +51,11 @@ body {
   .header .header-icon {
     font-size: 30px;
   }
+
+  .logo {
+    width: 150px;
+    height: 30px;
+  }
 }
 
 @media (min-width: 551px) {
@@ -62,35 +70,93 @@ body {
   }
 }
 .header .background-img {
-  background-image: url(img/webb-dark.png);
+  background-image: url(img/firewatch.jpg);
   padding: 30px;
   text-align: center;
+  background-size: cover;
+  background-position: 50% 38%;
+  width: auto;
+  height: auto;
+}
+
+:root {
+  --background: rgba(85, 214, 170, .85);
+  
 }
 
 .container {
-  padding: 10px 25px;
+  text-align: center;
   width: 100%;
-  background-color: darkkhaki;
-  display: flex;
-  justify-content: space-around;
+  background: var(--background);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
-}
+
 
 .logo {
-  width: 315px;
-  height: 60px;
-  float: left;
+  padding: 5px;
+  width: 250px;
+  height: 50px;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+
+}
+
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+  
 }
 
 
 
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 nav {
-  float: right;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+
 }
 
 nav ul {
@@ -100,45 +166,85 @@ nav ul {
 }
 
 nav li {
-  display: inline-block;
-  margin-left: 80px;
-  padding-top: 20px;
-
-  position: relative;
-
+  margin-bottom: 1em;
+  margin-left: 1em;
 }
 
 nav a {
+  color: white;
   text-decoration: none;
-  color: #444;
+  font-size: 1.0rem;
   text-transform: uppercase;
-  font-size: 14px;
+  font-family: Oxygen, sans-serif;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
-  color: white;
+  color: #000;
 }
 
-nav a:before {
-  content: '';
-  display: block;
-  height: 5px;
-  width: 100%;
-  background-color: #444;
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 300ms;
-}
-
-nav a:hover::before {
-  width: 100%;
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
 
 }
 
-@media (max-width: 850px) {
-  nav li {
-    margin-left: 80px;
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+
   }
 
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+
+  }
 }
