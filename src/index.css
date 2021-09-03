@@ -16,9 +16,7 @@ body {
   font-family: 'Besley', serif;
 }
 
-.header {
-  margin-bottom: 15%;
-}
+
 
 .header h3 {
   text-shadow: 0 0 12px black;
@@ -79,8 +77,10 @@ body {
   text-align: center;
   background-size: cover;
   background-position: 50% 38%;
-  width: auto;
-  height: auto;
+}
+
+.header {
+  width: 100%;
 }
 
 :root {
@@ -253,3 +253,30 @@ nav a:hover {
   }
 }
 
+.about-container {
+  width: 100%;
+  background-color: rgba(0, 0, 128, .30);
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.about-format {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+.about-format .main-col {
+  width: 780px;
+}
+
+.test {
+  background-color: rgba(0, 0, 128, .30);
+}
+
+.side-photo {
+  height: 210px;
+  border-radius: 15px;
+  width: 155px;
+}
