@@ -16,6 +16,10 @@ body {
   font-family: 'Besley', serif;
 }
 
+.header {
+  margin-bottom: 15%;
+}
+
 .header h3 {
   text-shadow: 0 0 12px black;
   color: snow;
@@ -84,7 +88,7 @@ body {
   
 }
 
-.container {
+.nav-container {
   text-align: center;
   width: 100%;
   background: var(--background);
@@ -198,7 +202,7 @@ nav a:hover {
   .nav-toggle-label {
     display: none;
   }
-  .container {
+  .nav-container {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
 
@@ -248,3 +252,4 @@ nav a:hover {
 
   }
 }
+

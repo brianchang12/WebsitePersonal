@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="container">
+    <div className="nav-container">
       <img src={Logo} alt="UBC-logo" className="logo" />
       <input type="checkbox" id="nav-toggle" className="nav-toggle" />
       <nav>
