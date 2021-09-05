@@ -1,12 +1,16 @@
 import React from "react";
 import Self from "../img/personal-pic.jpg";
+import AboutMeContent from "./AboutMeContent";
 
 const AboutMe = () => {
   return (
     <div className="about-container">
       <div className="about-format">
-        <span className="main-col">
-          <h2>About Me</h2>
+      <hr />
+        <h2>About Me</h2>
+        <hr />
+        <img src={Self} alt="Self" className="side-photo" />
+        <div className="main-col">
           <p>
             Welcome to my personal web page! I am a third year Computer Science
             student studying at the University of British Columbia (Vancouver).
@@ -19,8 +23,7 @@ const AboutMe = () => {
           <p>
             Reach out to <span>Linkedin</span> to contact me!
           </p>
-        </span>
-        <img src={Self} alt="Self" className="side-photo"/>
+        </div>
       </div>
     </div>
   );

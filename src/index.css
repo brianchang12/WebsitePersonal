@@ -11,20 +11,18 @@ body {
 
 .header h1 {
   color: snow;
-  text-shadow: 0 0 12px black;
+  text-shadow: 2px 2px 12px black;
   margin-bottom: 0px;
-  font-family: 'Besley', serif;
+  font-family: "Besley", serif;
 }
 
-
-
 .header h3 {
-  text-shadow: 0 0 12px black;
+  text-shadow: 2px 2px 12px black;
   color: snow;
   font-weight: strong;
   font-size: 2vmax;
   margin-bottom: 40px;
-  font-family: 'Oxygen', sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .header .header-icon {
@@ -42,35 +40,6 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 550px) {
-  .header h1 {
-    font-size: 40px;
-  }
-  .header h3 {
-    font-size: 17.5px;
-    margin-bottom: 20px;
-  }
-  .header .header-icon {
-    font-size: 30px;
-  }
-
-  .logo {
-    width: 150px;
-    height: 30px;
-  }
-}
-
-@media (min-width: 551px) {
-  .header h1 {
-    font-size: 70px;
-  }
-  .header h3 {
-    font-size: 25px;
-  }
-  .header .header-icon {
-    font-size: 40px;
-  }
-}
 .header .background-img {
   background-image: url(img/firewatch.jpg);
   padding: 30px;
@@ -84,8 +53,8 @@ body {
 }
 
 :root {
-  --background: rgba(85, 214, 170, .85);
-  
+  --background: rgba(85, 214, 170, 0.85);
+  --shadow: 20px 20px gray;
 }
 
 .nav-container {
@@ -96,8 +65,6 @@ body {
   z-index: 999;
   width: 100%;
 }
-
-
 
 .logo {
   padding: 5px;
@@ -118,27 +85,21 @@ body {
   width: 2em;
   border-radius: 2px;
   position: relative;
-
 }
-
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content: '';
+  content: "";
   position: absolute;
 }
 
 .nav-toggle-label span::before {
   bottom: 7px;
-
 }
 
 .nav-toggle-label span::after {
   top: 7px;
-  
 }
-
-
 
 .nav-toggle-label {
   position: absolute;
@@ -160,7 +121,6 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-
 }
 
 nav ul {
@@ -177,7 +137,7 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.0rem;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: Oxygen, sans-serif;
   opacity: 0;
@@ -190,7 +150,6 @@ nav a:hover {
 
 .nav-toggle:checked ~ nav {
   transform: scale(1, 1);
-
 }
 
 .nav-toggle:checked ~ nav a {
@@ -205,7 +164,6 @@ nav a:hover {
   .nav-container {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
-
   }
 
   .logo {
@@ -235,7 +193,7 @@ nav a:hover {
   }
 
   nav a::before {
-    content: '';
+    content: "";
     display: block;
     height: 5px;
     background: black;
@@ -248,35 +206,108 @@ nav a:hover {
   }
 
   nav a:hover::before {
-    transform: scale(1,1);
-
+    transform: scale(1, 1);
   }
 }
 
 .about-container {
   width: 100%;
-  background-color: rgba(0, 0, 128, .30);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
 
+.about-container h2 {
+  font-weight: strong;
+  text-align: center;
+  font-family: "Besley", serif;
+  color: rgb(211, 211, 211);
+  font-size: 50px;
+  margin: 0 0;
+  word-spacing: 10px;
 }
 
 .about-format {
-  width: 75%;
+  width: 70%;
+  border-radius: 35px;
+  background-image: url(./img/dark-honeycomb.png);
   margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  box-shadow: var(--shadow);
 }
-
-
 .about-format .main-col {
-  width: 780px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 65%;
+  font-family: "Oxygen", sans-serif;
+  text-align: left;
+  line-height: 1.5;
+  color: rgb(211, 211, 211);
+
 }
 
-.test {
-  background-color: rgba(0, 0, 128, .30);
+.about-format hr {
+  color: rgb(88, 0 , 0);
+  background-color: rgb(88, 0 , 0);
+  height: 5px;
+  border-color: rgb(88, 0 , 0);
+  width: 80%;
 }
 
 .side-photo {
   height: 210px;
   border-radius: 15px;
-  width: 155px;
+  width: 150px;
+  vertical-align: middle;
+  margin-right: 55px;
+  margin-left: 55px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1080px) {
+  .side-photo {
+    display: none;
+  }
+
+  .about-format .main-col {
+    width: 85%;
+  }
+ 
+}
+
+
+@media (max-width: 550px) {
+  .header h1 {
+    font-size: 40px;
+  }
+  .about-container h2 {
+    font-size: 30px;
+  }
+
+  
+  .header h3 {
+    font-size: 17.5px;
+    margin-bottom: 20px;
+  }
+  .header .header-icon {
+    font-size: 30px;
+  }
+
+  .logo {
+    width: 150px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 551px) {
+  .header h1 {
+    font-size: 70px;
+  }
+  .header h3 {
+    font-size: 25px;
+  }
+  .header .header-icon {
+    font-size: 40px;
+  }
 }
