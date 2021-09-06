@@ -50,6 +50,7 @@ body {
 
 .header {
   width: 100%;
+  margin: 0px;
 }
 
 :root {
@@ -210,14 +211,11 @@ nav a:hover {
   }
 }
 
-.about-container {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-}
 
-.about-container h2 {
+
+.about-format h2,
+.lan-format h2,
+.tech-format h2 {
   font-weight: strong;
   text-align: center;
   font-family: "Besley", serif;
@@ -228,15 +226,33 @@ nav a:hover {
 }
 
 .about-format {
+  margin: 10vh;
   width: 70%;
   border-radius: 35px;
   background-image: url(./img/dark-honeycomb.png);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   padding: 30px;
   box-shadow: var(--shadow);
 }
-.about-format .main-col {
+
+ .lan-format,
+ .tech-format {
+  flex-basis: 40%;
+  width: 100%;
+  border-radius: 35px;
+  margin: 0 0;
+  background-image: url(./img/dark-honeycomb.png);
+  text-align: center;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+
+.about-format .main-col,
+.lan-format .main-col,
+.tech-format .main-col {
   display: inline-block;
   vertical-align: middle;
   width: 65%;
@@ -247,7 +263,9 @@ nav a:hover {
 
 }
 
-.about-format hr {
+.about-format hr,
+.lan-format hr,
+.tech-format hr {
   color: rgb(88, 0 , 0);
   background-color: rgb(88, 0 , 0);
   height: 5px;
@@ -265,12 +283,39 @@ nav a:hover {
   margin-top: 30px;
 }
 
+.tray-comp {
+  margin: 10vh auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+
+
+
+
 @media (max-width: 1080px) {
   .side-photo {
     display: none;
   }
+  .tray-comp {
+    display: block;
+    width: 100%;
+  }
+  .lan-format {
+    width: 70%;
+    margin: 0 auto;
+  }
 
-  .about-format .main-col {
+  .tech-format {
+    width: 70%;
+    margin: 10vh auto 0 auto;
+  }
+
+  .about-format .main-col,
+  .lan-format .main-col,
+  .tech-format .main-col {
     width: 85%;
   }
  
@@ -281,7 +326,9 @@ nav a:hover {
   .header h1 {
     font-size: 40px;
   }
-  .about-container h2 {
+  .about-container h2,
+  .lan-format h2,
+  .tech-format h2 {
     font-size: 30px;
   }
 
