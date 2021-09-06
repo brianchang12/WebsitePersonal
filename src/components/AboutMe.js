@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import React from "react";
 import Self from "../img/personal-pic.jpg";
 
@@ -19,6 +20,7 @@ const AboutMe = () => {
           software developer role.
         </p>
         <p>Reach out to Linkedin to contact me!</p>
+        <div className="btn-format"><button>Download Resume</button></ div>
       </div>
     </div>
   );

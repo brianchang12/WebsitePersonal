@@ -6,6 +6,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./pages/Home"
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Home/>
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }

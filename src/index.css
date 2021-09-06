@@ -1,3 +1,10 @@
+:root {
+  --background: rgba(85, 214, 170, 0.85);
+  --shadow: 20px 20px gray;
+  --footer: rgba(128, 128, 128, 0.85);
+  --btn-hr-color: rgb(88, 0, 0);
+}
+
 .text {
   font-family: "Georgia", "Garamond", serif;
 }
@@ -25,19 +32,20 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
-.header .header-icon {
+.icon {
   color: snow;
 }
 
-.header .header-icon:hover {
+.icon:hover {
   color: firebrick;
 }
-.header .icon-tray {
+.icon-tray {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   width: 50%;
   margin: 0 auto;
+  font-size: 45px;
 }
 
 .header .background-img {
@@ -51,11 +59,6 @@ body {
 .header {
   width: 100%;
   margin: 0px;
-}
-
-:root {
-  --background: rgba(85, 214, 170, 0.85);
-  --shadow: 20px 20px gray;
 }
 
 .nav-container {
@@ -210,8 +213,24 @@ nav a:hover {
     transform: scale(1, 1);
   }
 }
+.btn-format {
+  text-align: center;
+}
 
-
+.about-format button:hover {
+  background-color:rgba(85, 214, 170);
+}
+.about-format button {
+  border-radius: 8px;
+  margin: 15px;
+  padding: 7px 40px;
+  border: none;
+  background: none;
+  background-color: var(--btn-hr-color);
+  font-family: "Oxygen", sans-serif;
+  font-size: 17px;
+  color: snow;
+}
 
 .about-format h2,
 .lan-format h2,
@@ -227,7 +246,7 @@ nav a:hover {
 
 .about-format {
   margin: 10vh;
-  width: 65%;
+  width: 70%;
   border-radius: 35px;
   background-image: url(./img/dark-honeycomb.png);
   margin-left: auto;
@@ -237,8 +256,8 @@ nav a:hover {
   box-shadow: var(--shadow);
 }
 
- .lan-format,
- .tech-format {
+.lan-format,
+.tech-format {
   flex-basis: 40%;
   width: 100%;
   border-radius: 35px;
@@ -248,7 +267,6 @@ nav a:hover {
   padding: 30px;
   box-shadow: var(--shadow);
 }
-
 
 .about-format .main-col,
 .tech-format .main-col,
@@ -260,11 +278,7 @@ nav a:hover {
   text-align: left;
   line-height: 1.5;
   color: rgb(211, 211, 211);
-
 }
-
-
-
 
 .lan-format ul {
   margin: 0;
@@ -276,7 +290,7 @@ nav a:hover {
 .tech-format ul {
   margin: 0;
   padding: 0;
- 
+
   list-style-position: inside;
   text-align: center;
   columns: 2;
@@ -284,11 +298,9 @@ nav a:hover {
   -moz-columns: 2;
 }
 
-.lan-format li{
+.lan-format li {
   font-size: 20px;
 }
-
-
 
 .tech-format li {
   font-size: 17px;
@@ -297,10 +309,10 @@ nav a:hover {
 .about-format hr,
 .lan-format hr,
 .tech-format hr {
-  color: rgb(88, 0 , 0);
-  background-color: rgb(88, 0 , 0);
+  color: rgb(88, 0, 0);
+  background-color: rgb(88, 0, 0);
   height: 5px;
-  border-color: rgb(88, 0 , 0);
+  border-color: rgb(88, 0, 0);
   width: 80%;
 }
 
@@ -322,9 +334,14 @@ nav a:hover {
   width: 70%;
 }
 
-
-
-
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--footer);
+  padding: 10px;
+}
 
 @media (max-width: 1080px) {
   .side-photo {
@@ -349,11 +366,7 @@ nav a:hover {
   .tech-format .main-col {
     width: 85%;
   }
-
-
- 
 }
-
 
 @media (max-width: 550px) {
   .header h1 {

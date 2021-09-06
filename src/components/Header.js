@@ -14,11 +14,11 @@ const Header = () => {
           </h3>
           <div className="icon-tray">
             <a href="https://github.com/personalbrian">
-              <FaGithub className="header-icon" />
+              <FaGithub className="icon" />
             </a>
             
             <a href="https://www.linkedin.com/in/lichengchang/">
-              <FaLinkedin className="header-icon" />
+              <FaLinkedin className="icon" />
             </a>
           </div>
         </div>
