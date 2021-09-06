@@ -7,15 +7,15 @@ const Languages = () => {
         <h2>Languages</h2>
         <hr />
         <div className="main-col">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+        <ul>
+         <li><span>Java</span></li>
+         <li>Python</li>
+         <li>SQL</li>
+         <li>HTML</li>
+         <li>CSS</li>
+         <li>JavaScript</li>
+         <li>Dart</li>
+       </ul>
         </div>
     </div>
   );

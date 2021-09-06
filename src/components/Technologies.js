@@ -7,15 +7,19 @@ const Technologies = () => {
       <h2>Tools</h2>
       <hr />
       <div className="main-col">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Pygame</li>
+          <li>JUnit</li>
+          <li>Python Requests</li>
+          <li>Widget Testing (Flutter)</li>
+          <li>Flutter</li>
+          <li>NumPy</li>
+          <li>PyTorch</li>
+          <li>React JS</li>
+          <li>Node JS</li>
+        </ul>
         </div>
       </div>
   );

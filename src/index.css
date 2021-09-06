@@ -227,7 +227,7 @@ nav a:hover {
 
 .about-format {
   margin: 10vh;
-  width: 70%;
+  width: 65%;
   border-radius: 35px;
   background-image: url(./img/dark-honeycomb.png);
   margin-left: auto;
@@ -251,16 +251,47 @@ nav a:hover {
 
 
 .about-format .main-col,
-.lan-format .main-col,
-.tech-format .main-col {
+.tech-format .main-col,
+.lan-format .main-col {
   display: inline-block;
   vertical-align: middle;
-  width: 65%;
+  width: 60%;
   font-family: "Oxygen", sans-serif;
   text-align: left;
   line-height: 1.5;
   color: rgb(211, 211, 211);
 
+}
+
+
+
+
+.lan-format ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.tech-format ul {
+  margin: 0;
+  padding: 0;
+ 
+  list-style-position: inside;
+  text-align: center;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.lan-format li{
+  font-size: 20px;
+}
+
+
+
+.tech-format li {
+  font-size: 17px;
 }
 
 .about-format hr,
@@ -318,6 +349,8 @@ nav a:hover {
   .tech-format .main-col {
     width: 85%;
   }
+
+
  
 }
 
@@ -326,13 +359,12 @@ nav a:hover {
   .header h1 {
     font-size: 40px;
   }
-  .about-container h2,
+  .about-format h2,
   .lan-format h2,
   .tech-format h2 {
     font-size: 30px;
   }
 
-  
   .header h3 {
     font-size: 17.5px;
     margin-bottom: 20px;
