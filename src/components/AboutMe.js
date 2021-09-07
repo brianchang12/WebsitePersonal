@@ -4,7 +4,7 @@ import Self from "../img/personal-pic.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="about-format">
+    <div className="big-format">
       <hr />
       <h2>About Me</h2>
       <hr />

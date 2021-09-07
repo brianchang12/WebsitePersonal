@@ -58,7 +58,7 @@ body {
 
 .header {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
 
 .nav-container {
@@ -217,10 +217,10 @@ nav a:hover {
   text-align: center;
 }
 
-.about-format button:hover {
+.big-format button:hover {
   background-color:rgba(85, 214, 170);
 }
-.about-format button {
+.big-format button {
   border-radius: 8px;
   margin: 15px;
   padding: 7px 40px;
@@ -232,7 +232,7 @@ nav a:hover {
   color: snow;
 }
 
-.about-format h2,
+.big-format h2,
 .lan-format h2,
 .tech-format h2 {
   font-weight: strong;
@@ -244,7 +244,7 @@ nav a:hover {
   word-spacing: 10px;
 }
 
-.about-format {
+.big-format {
   margin: 10vh;
   width: 70%;
   border-radius: 35px;
@@ -268,12 +268,12 @@ nav a:hover {
   box-shadow: var(--shadow);
 }
 
-.about-format .main-col,
+.big-format .main-col,
 .tech-format .main-col,
 .lan-format .main-col {
   display: inline-block;
   vertical-align: middle;
-  width: 60%;
+  width: 65%;
   font-family: "Oxygen", sans-serif;
   text-align: left;
   line-height: 1.5;
@@ -298,6 +298,13 @@ nav a:hover {
   -moz-columns: 2;
 }
 
+.list-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color:snow;
+  margin-bottom: 2vh;
+}
+
 .lan-format li {
   font-size: 20px;
 }
@@ -306,7 +313,9 @@ nav a:hover {
   font-size: 17px;
 }
 
-.about-format hr,
+
+
+.big-format hr,
 .lan-format hr,
 .tech-format hr {
   color: rgb(88, 0, 0);
@@ -340,8 +349,10 @@ nav a:hover {
   bottom: 0;
   width: 100%;
   background-color: var(--footer);
-  padding: 10px;
+  padding-top: 10px;
 }
+
+
 
 @media (max-width: 1080px) {
   .side-photo {
@@ -361,18 +372,24 @@ nav a:hover {
     margin: 10vh auto 0 auto;
   }
 
-  .about-format .main-col,
+  .big-format .main-col,
   .lan-format .main-col,
   .tech-format .main-col {
     width: 85%;
   }
+
+  .list-heading {
+    font-size: 16px;
+  }
+
+
 }
 
 @media (max-width: 550px) {
   .header h1 {
     font-size: 40px;
   }
-  .about-format h2,
+  .big-format h2,
   .lan-format h2,
   .tech-format h2 {
     font-size: 30px;
@@ -389,6 +406,10 @@ nav a:hover {
   .logo {
     width: 150px;
     height: 30px;
+  }
+
+  .list-content {
+    font-size: 11px;
   }
 }
 
