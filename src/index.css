@@ -1,39 +1,68 @@
+/*Start Layout Rule*/
+
 :root {
-  --background: rgba(85, 214, 170, 0.85);
+  --background: rgba(128, 128, 128, 0.85);
   --shadow: 20px 20px gray;
   --footer: rgba(128, 128, 128, 0.85);
   --btn-hr-color: rgb(88, 0, 0);
+  --title-text: "Besley", serif;
+  --content-text: "Oxygen", sans-serif;
+   font-size: 1em; 
+  --title-color: white;
+  --content-color: gray;
 }
 
-.text {
-  font-family: "Georgia", "Garamond", serif;
-}
-
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+html, body {
+  margin: 0;
+  padding: 0;
   background-image: url(img/herringbone.png);
+  font-family: var(--content-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color);
+  font-family: var(--title-text);
+}
+
+
+p {
+  color: var(--content-color);
+  font-family: var(--content-text);
+}
+
+
+/* Header Rule*/
+
+.header .background-img {
+  background-image: url(img/firewatch.jpg);
+  padding: 15px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: 50% 38%;
+  width: 100%;
+  margin: 0;
 }
 
 .header h1 {
-  color: snow;
+  margin-top: 1.6em;
   text-shadow: 2px 2px 12px black;
-  margin-bottom: 0px;
-  font-family: "Besley", serif;
+  margin-bottom: 0;
+  font-size: 6rem;
 }
 
 .header h3 {
   text-shadow: 2px 2px 12px black;
-  color: snow;
-  font-weight: strong;
-  font-size: 2vmax;
-  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2.5em;
   font-family: "Oxygen", sans-serif;
 }
 
+/*Icons Rule*/
+
 .icon {
   color: snow;
+  font-size: 2.8rem;
 }
 
 .icon:hover {
@@ -45,21 +74,11 @@ body {
   flex-direction: row;
   width: 50%;
   margin: 0 auto;
-  font-size: 45px;
 }
 
-.header .background-img {
-  background-image: url(img/firewatch.jpg);
-  padding: 30px;
-  text-align: center;
-  background-size: cover;
-  background-position: 50% 38%;
-}
+/* Navigation Rule */
 
-.header {
-  width: 100%;
-  margin: 0;
-}
+
 
 .nav-container {
   text-align: center;
@@ -71,9 +90,9 @@ body {
 }
 
 .logo {
-  padding: 5px;
-  width: 250px;
-  height: 50px;
+  padding: 0.5em;
+  width: 20rem;
+  height: 4rem;
 }
 
 .nav-toggle {
@@ -135,7 +154,8 @@ nav ul {
 
 nav li {
   margin-bottom: 1em;
-  margin-left: 1em;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
 }
 
 nav a {
@@ -161,7 +181,7 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
   .nav-toggle-label {
     display: none;
   }
@@ -181,6 +201,8 @@ nav a:hover {
     justify-content: flex-end;
     align-items: center;
   }
+
+
 
   nav ul {
     display: flex;
@@ -213,36 +235,104 @@ nav a:hover {
     transform: scale(1, 1);
   }
 }
+
+
+/* Button Format Rule*/
+
+
 .btn-format {
+  margin: 4rem 0 1.5em 0;
   text-align: center;
 }
 
-.big-format button:hover {
-  background-color:rgba(85, 214, 170);
+button:hover {
+  background-color: rgba(85, 214, 170);
 }
-.big-format button {
+
+
+button {
   border-radius: 8px;
-  margin: 15px;
-  padding: 7px 40px;
+  margin: 0 auto;
+  padding: 0.4em 3.5em;
   border: none;
   background: none;
   background-color: var(--btn-hr-color);
   font-family: "Oxygen", sans-serif;
-  font-size: 17px;
+  font-size: 1.1em;
   color: snow;
 }
+
+
+/* Card Format Rule*/
 
 .big-format h2,
 .lan-format h2,
 .tech-format h2 {
   font-weight: strong;
   text-align: center;
-  font-family: "Besley", serif;
-  color: rgb(211, 211, 211);
-  font-size: 50px;
+  font-size: 2.8em;
   margin: 0 0;
   word-spacing: 10px;
 }
+
+.big-format .main-col,
+.tech-format .main-col,
+.lan-format .main-col {
+  display: inline-block;
+  vertical-align: middle;
+  width: 65%;
+  text-align: left;
+  line-height: 1.5;
+  color: var(--content-color);
+  font-size: 1em;
+}
+
+.big-format hr,
+.lan-format hr,
+.tech-format hr {
+  color: var(--btn-hr-color);
+  background-color: var(--btn-hr-color);
+  height: 0.4rem;
+  border: none;
+  width: 80%;
+}
+
+
+/* Course Card Rule*/
+
+.list-heading {
+  font-size: 0.70em;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.course-heading {
+  margin: 3vh auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 70%;
+  flex-wrap: nowrap;
+  font-size: 2.5rem;
+}
+
+.list-content li {
+  margin: 1vh 0 1vh 0;
+}
+
+.course-name {
+  color: goldenrod;
+  font-weight: bold;
+}
+
+/* Work Experience Card*/
+.work-heading {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+
+/* Big Format / Large Card Format */ 
 
 .big-format {
   margin: 10vh;
@@ -254,7 +344,22 @@ nav a:hover {
   text-align: center;
   padding: 30px;
   box-shadow: var(--shadow);
+  font-size: 1rem;
 }
+
+.big-format .course-line {
+  color: gray;
+  background-color: gray;
+  height: 2px;
+  border: none;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+
+/* Small Card Format */
+
 
 .lan-format,
 .tech-format {
@@ -268,17 +373,6 @@ nav a:hover {
   box-shadow: var(--shadow);
 }
 
-.big-format .main-col,
-.tech-format .main-col,
-.lan-format .main-col {
-  display: inline-block;
-  vertical-align: middle;
-  width: 65%;
-  font-family: "Oxygen", sans-serif;
-  text-align: left;
-  line-height: 1.5;
-  color: rgb(211, 211, 211);
-}
 
 .lan-format ul {
   margin: 0;
@@ -290,7 +384,6 @@ nav a:hover {
 .tech-format ul {
   margin: 0;
   padding: 0;
-
   list-style-position: inside;
   text-align: center;
   columns: 2;
@@ -298,42 +391,6 @@ nav a:hover {
   -moz-columns: 2;
 }
 
-.list-heading {
-  font-size: 20px;
-  font-weight: bold;
-  color:snow;
-  margin-bottom: 2vh;
-}
-
-.lan-format li {
-  font-size: 20px;
-}
-
-.tech-format li {
-  font-size: 17px;
-}
-
-
-
-.big-format hr,
-.lan-format hr,
-.tech-format hr {
-  color: rgb(88, 0, 0);
-  background-color: rgb(88, 0, 0);
-  height: 5px;
-  border-color: rgb(88, 0, 0);
-  width: 80%;
-}
-
-.side-photo {
-  height: 210px;
-  border-radius: 15px;
-  width: 150px;
-  vertical-align: middle;
-  margin-right: 55px;
-  margin-left: 55px;
-  margin-top: 30px;
-}
 
 .tray-comp {
   margin: 10vh auto;
@@ -341,7 +398,33 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   width: 70%;
+  flex-wrap: nowrap;
 }
+
+.lan-format li {
+  font-size: 1.3em;
+}
+
+.tech-format li {
+  font-size: 1.1em;
+}
+
+/* Photos */
+
+.side-photo {
+  height: 16.5rem;
+  border-radius: 15px;
+  width: 10rem;
+  vertical-align: middle;
+  margin-right: 3.6em;
+  margin-left: 3.6em;
+  margin-top: 2em;
+}
+
+
+
+/* Footer */
+
 
 .footer {
   position: relative;
@@ -349,9 +432,8 @@ nav a:hover {
   bottom: 0;
   width: 100%;
   background-color: var(--footer);
-  padding-top: 10px;
+  padding: 15px 0;
 }
-
 
 
 @media (max-width: 1080px) {
@@ -378,49 +460,41 @@ nav a:hover {
     width: 85%;
   }
 
-  .list-heading {
-    font-size: 16px;
-  }
 
 
 }
 
-@media (max-width: 550px) {
+
+@media (max-width: 650px) {
   .header h1 {
-    font-size: 40px;
+    font-size: 3.5rem;
   }
   .big-format h2,
   .lan-format h2,
   .tech-format h2 {
-    font-size: 30px;
+    font-size: 1.8em;
   }
 
-  .header h3 {
-    font-size: 17.5px;
-    margin-bottom: 20px;
+  .list-heading {
+    font-size: 0.4em;
   }
-  .header .header-icon {
-    font-size: 30px;
+
+ 
+  .header h3 {
+    font-size: 1rem;
+    margin-bottom: 1.8em;
+  }
+  .icon {
+    font-size: 1.7rem;
   }
 
   .logo {
-    width: 150px;
-    height: 30px;
+    width: 9.2rem;
+    height: 2.8rem;
   }
 
   .list-content {
-    font-size: 11px;
+    font-size: 0.8em;
   }
 }
 
-@media (min-width: 551px) {
-  .header h1 {
-    font-size: 70px;
-  }
-  .header h3 {
-    font-size: 25px;
-  }
-  .header .header-icon {
-    font-size: 40px;
-  }
-}

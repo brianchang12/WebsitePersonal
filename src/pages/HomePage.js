@@ -2,7 +2,7 @@ import React from "react";
 import AboutMe from "../components/AboutMe";
 import Languages from "../components/Languages";
 import Technologies from "../components/Technologies";
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <AboutMe />
@@ -14,4 +14,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

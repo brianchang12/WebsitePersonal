@@ -1,9 +1,10 @@
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
-import WorkExperience from "./pages/WorkExperience";
+import WorkExperiencePage from "./pages/WorkExperiencePage";
+import CoursesPage from "./pages/CoursesPage";
 
 function App() {
   return (
@@ -14,10 +15,13 @@ function App() {
       </div>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <HomePage />
         </Route>
         <Route path="/work-experiences">
-          <WorkExperience />
+          <WorkExperiencePage />
+        </Route>
+        <Route path="/courses">
+          <CoursesPage />
         </Route>
       </Switch>
       <Footer />
