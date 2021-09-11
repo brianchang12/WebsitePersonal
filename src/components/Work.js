@@ -7,7 +7,7 @@ const Work = () => {
       <h2>Work Experience</h2>
       <hr />
       <div className="main-col">
-        <span className="work-heading">
+        <span className="work-project-heading">
           <h4 className="list-heading">
             Junior Auxiliary Lifeguard (Jan 2018 - Sept 2021):
           </h4>
@@ -20,7 +20,7 @@ const Work = () => {
           <li>Worked in teams to ensure the safety of all patrons.</li>
           <li>Taught students swimming to Canadian Red Cross standards.</li>
         </ul>
-        <span className="work-heading">
+        <span className="work-project-heading">
           <h4 className="list-heading">
             Network Support Analyst (Sept 2020 - April 2021):
           </h4>

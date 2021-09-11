@@ -241,7 +241,7 @@ nav a:hover {
 
 
 .btn-format {
-  margin: 4rem 0 1.5em 0;
+  margin: 4em 0 1.5em 0;
   text-align: center;
 }
 
@@ -325,11 +325,13 @@ button {
   font-weight: bold;
 }
 
-/* Work Experience Card*/
-.work-heading {
+/* Work Experience & Project Card*/
+.work-project-heading {
   text-align: center;
   font-size: 2.5rem;
 }
+
+
 
 
 /* Big Format / Large Card Format */ 
@@ -477,6 +479,12 @@ button {
 
   .list-heading {
     font-size: 0.4em;
+  }
+
+  button {
+    margin-top: 1em;
+    font-size: 0.8em;
+
   }
 
  
